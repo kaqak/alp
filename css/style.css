@@ -32,18 +32,30 @@
 
 html {
   font-size: 62.5%;
-  /* font-size: 10px; 100% or 10/16 =62.5 */ }
+  /* font-size: 10px; 100% or 10px/16px=62.5 % */ }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (max-width: 37.5em) {
+    html {
+      font-size: 30%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  padding: 3rem; }
 
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 1.7;
-  color: #777;
-  padding: 3rem; }
+  color: #777; }
 
 .heading-primary {
   color: #fff;
@@ -60,6 +72,10 @@ body {
     /* animation-iteration-count: 3; */
     /* animation-delay: 3s; */
     animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); }
+    @media (max-width: 37.5em) {
+      .heading-primary--main {
+        letter-spacing: 1rem;
+        font-family: 5rem; } }
   .heading-primary--sub {
     display: block;
     font-size: 2rem;
@@ -68,6 +84,9 @@ body {
     animation-name: moveInRight;
     animation-duration: 1.8s;
     animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955); }
+    @media (max-width: 37.5em) {
+      .heading-primary--sub {
+        letter-spacing: 0.5rem; } }
 
 .heading-secondary {
   font-size: 3.5rem;
@@ -79,6 +98,12 @@ body {
   color: transparent;
   transition: all 0.2s;
   letter-spacing: 0.2rem; }
+  @media (max-width: 56.25em) {
+    .heading-secondary {
+      font-size: 3rem; } }
+  @media (max-width: 37.5em) {
+    .heading-secondary {
+      font-size: 2.5rem; } }
   .heading-secondary:hover {
     transform: skewY(2deg) skewX(15deg) scale(1.1);
     text-shadow: 0.5rem 1rem 2rem black; }
